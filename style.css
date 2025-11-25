@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif Greek', serif;
+}
+
+body {
+    background: #f4f1ec;
+    color: #2e2a27;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+header {
+    background: linear-gradient(to bottom, #3d2f25, #5a4639);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header h4 {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #f8f3ea;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #d9c4a7;
+    color: #3d2f25;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.introducao .intro {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.introducao p {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.monte-olimpo {
+    margin-bottom: 50px;
+}
+
+.monte-olimpo h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.monte-olimpo p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1.05rem;
+}
+
+.deuses .card,
+.criaturas .card {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .deuses, .criaturas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        align-items: stretch;
+    }
+
+    .introducao, .monte-olimpo {
+        grid-column: 1 / -1;
+    }
+}
+
+footer {
+    background: #3d2f25;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
