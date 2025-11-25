@@ -10,7 +10,11 @@ body {
     background-color: #f3f1ee;
     color: #2a2a2a;
     line-height: 1.7;
+    background-image: url("img/fundo.png");
+    background-size: 300px; /* ajuste o tamanho aqui */
+    background-repeat: repeat; 
 }
+
 
 img {
     width: 100%;
@@ -98,7 +102,7 @@ main {
     padding: 1.5rem;
     margin: 1.5rem 0;
     border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
 }
 
@@ -115,7 +119,9 @@ main {
 }
 
 /* ===== GRID PARA CARDS ===== */
-.deuses, .criaturas, .Relíquias {
+.deuses,
+.criaturas,
+.Relíquias {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
