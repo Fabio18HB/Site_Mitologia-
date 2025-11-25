@@ -1,367 +1,174 @@
-/* style.css
-   Mitologia Grega — CSS responsivo, acessível e moderno
-   Mobile-first, grid fluido, dark-mode, redução de movimento, impressão
-*/
-
-/* -------------------------
-   Reset / Normalização
-   ------------------------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-:root{
-  /* Paleta */
-  --bg: #fbfbfa;
-  --card: #ffffff;
-  --muted: #6b7280;
-  --accent: #1e3a8a;         /* azul profundo */
-  --accent-2: #0ea5a4;       /* teal */
-  --border: #e6e7ea;
-  --shadow: 0 8px 24px rgba(18, 25, 40, 0.06);
-
-  /* Tipografia */
-  --ff-serif: "Noto Serif Greek", Georgia, "Times New Roman", serif;
-  --ff-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-  /* Sizing */
-  --max-width: 1200px;
-  --radius: 14px;
-  --gap: 1.25rem;
-  --container-pad: 1rem;
+body {
+    font-family: 'Noto Serif Greek', serif;
+    background-color: #f3f1ee;
+    color: #2a2a2a;
+    line-height: 1.7;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg: #0b1020;
-    --card: #071025;
-    --muted: #9aa6bf;
-    --accent: #7dd3fc;
-    --accent-2: #67e8f9;
-    --border: rgba(255,255,255,0.06);
-    --shadow: 0 10px 30px rgba(0,0,0,0.6);
-  }
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-/* Accessibility: reduced motion */
-@media (prefers-reduced-motion: reduce){
-  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #3c2c10, #7c5e2b);
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #fff;
 }
 
-/* -------------------------
-   Base
-   ------------------------- */
-html, body {
-  height: 100%;
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
 }
 
-body{
-  margin: 0;
-  font-family: var(--ff-sans);
-  background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 90%, transparent 10%));
-  color: #0b1220;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.5;
-  padding: 0;
+header h4 {
+    font-weight: 300;
+    opacity: 0.9;
 }
 
-/* Constrain central content */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffe2a8;
+}
+
+/* ===== SESSÕES ===== */
 main {
-  max-width: var(--max-width);
-  margin: 1.25rem auto;
-  padding: 0 var(--container-pad);
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
-/* -------------------------
-   Header & Nav
-   ------------------------- */
-header{
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 1.25rem var(--container-pad);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: flex-start;
-  background: transparent;
+.introducao {
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-header h1{
-  margin: 0;
-  font-family: var(--ff-serif);
-  font-weight: 700;
-  font-size: clamp(1.6rem, 3.6vw, 2.35rem);
-  letter-spacing: -0.02em;
-  color: var(--accent);
+.introducao h2 {
+    font-size: 2rem;
 }
 
-header h4{
-  margin: 0.125rem 0 0;
-  font-size: clamp(0.9rem, 2.3vw, 1.05rem);
-  color: var(--muted);
-  font-style: italic;
+.introducao p {
+    max-width: 800px;
+    margin: 1rem auto;
 }
 
-/* Nav */
-nav{
-  width: 100%;
-  margin-top: 0.75rem;
+/* ===== MONTE OLIMPO ===== */
+.monte-olimpo {
+    margin: 2rem 0;
 }
 
-nav ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  align-items: center;
+.monte-olimpo h3 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
 }
 
-nav a{
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.45rem 0.9rem;
-  border-radius: 999px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--card), transparent 20%), transparent);
-  border: 1px solid var(--border);
-  font-weight: 600;
-  color: inherit;
-  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
-  font-size: 0.95rem;
+.monte-olimpo p {
+    margin-bottom: 1rem;
 }
 
-nav a:focus,
-nav a:hover{
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
-  color: var(--accent-2);
-  outline: none;
+/* ===== CARDS ===== */
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
 }
 
-/* -------------------------
-   Sections e Introdução
-   ------------------------- */
-section {
-  margin-top: 1.5rem;
-  padding: 1.25rem;
-  background: transparent;
-  border-radius: calc(var(--radius) * 0.85);
+.card:hover {
+    transform: scale(1.02);
 }
 
-.introducao{
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, transparent, transparent);
-  padding: 0.75rem;
+.card h2 {
+    margin: 0.7rem 0;
 }
 
-.introducao .intro{
-  margin: 0 0 0.35rem;
-  font-family: var(--ff-serif);
-  color: var(--accent);
-  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+.card p {
+    margin-top: 0.5rem;
 }
 
-/* Texto da introdução */
-.introducao p{
-  margin: 0;
-  color: var(--muted);
-  max-width: 75ch;
-  font-size: clamp(0.95rem, 1.9vw, 1rem);
+/* ===== GRID PARA CARDS ===== */
+.deuses, .criaturas, .Relíquias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
-/* -------------------------
-   Monte Olimpo (destaque)
-   ------------------------- */
-.monte-olimpo{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 1rem;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-  padding: 0.75rem;
-  border-radius: 12px;
-  border: 1px solid var(--border);
+/* Mantém a introdução e o monte olimpo ocupando toda a largura */
+.deuses .introducao,
+.deuses .monte-olimpo,
+.criaturas .introducao,
+.Reliquias .introducao {
+    grid-column: 1 / -1;
 }
 
-.monte-olimpo h3{ margin: 0 0 0.25rem; color: var(--accent); font-family: var(--ff-serif); }
-.monte-olimpo p{ margin: 0; color: var(--muted); }
-
-.monte-olimpo img{
-  width: 100%;
-  height: clamp(160px, 28vw, 300px);
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #3c2c10;
+    color: #fff;
+    margin-top: 3rem;
 }
 
-/* -------------------------
-   Grid de cards (auto-fit)
-   ------------------------- */
-.deuses,
-.criaturas,
-.Relíquias {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: 1fr;
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 850px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
 }
 
-/* Cards */
-.card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1rem;
-  box-shadow: var(--shadow);
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
-  align-items: start;
-}
+@media (max-width: 600px) {
+    .card {
+        padding: 1rem;
+    }
 
-/* Card image + título layout */
-.card img{
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  display: block;
-}
+    header {
+        padding: 1.5rem;
+    }
 
-/* Títulos dos cards */
-.card h2{
-  margin: 0;
-  font-size: clamp(1rem, 2.1vw, 1.15rem);
-  font-family: var(--ff-serif);
-  color: var(--accent);
-}
+    header h1 {
+        font-size: 1.7rem;
+    }
 
-/* Texto do card */
-.card p{
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.98rem;
-}
+    header h4 {
+        font-size: 0.9rem;
+    }
 
-/* Pequena melhoria visual em telas maiores:
-   deixar cards em colunas quando houver espaço */
-@media (min-width: 640px){
-  .deuses, .criaturas, .Relíquias {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  }
-
-  .card{
-    padding: 1rem;
-  }
-
-  /* tornar layout do header mais horizontal */
-  header{
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  nav{
-    margin-top: 0;
-  }
-}
-
-/* Em telas grandes: destaque do Monte Olimpo lado a lado */
-@media (min-width: 900px){
-  .monte-olimpo{
-    grid-template-columns: 1fr 420px;
-    gap: 1rem;
-  }
-
-  .monte-olimpo p{
-    max-width: none;
-  }
-
-  /* Cards maiores e com hover sutil */
-  .card{
-    transition: transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 220ms;
-  }
-  .card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(9,12,25,0.12);
-  }
-}
-
-/* Layout final ultra-largo */
-@media (min-width: 1200px){
-  main { padding-left: 2rem; padding-right: 2rem; }
-}
-
-/* -------------------------
-   Footer
-   ------------------------- */
-footer{
-  margin-top: 2rem;
-  padding: 1.1rem var(--container-pad);
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.95rem;
-  border-top: 1px solid var(--border);
-  background: transparent;
-}
-
-/* -------------------------
-   Acessibilidade & foco
-   ------------------------- */
-a, button {
-  outline: none;
-}
-
-:focus{
-  outline: 3px solid color-mix(in srgb, var(--accent), black 10%);
-  outline-offset: 3px;
-  border-radius: 6px;
-}
-
-/* Imagens sem src guard (placeholder visual) */
-img[alt]:not([src]),
-img[src=""]{
-  min-height: 140px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--card), var(--bg) 30%), transparent);
-  display: block;
-  border-radius: 10px;
-  border: 1px dashed var(--border);
-}
-
-/* -------------------------
-   Tipografia: serifas para títulos
-   ------------------------- */
-h1, h2, h3, h4 {
-  font-family: var(--ff-serif);
-}
-
-/* -------------------------
-   Impressão
-   ------------------------- */
-@media print {
-  body { color: #000; background: #fff; }
-  nav, footer { display: none; }
-  .card { box-shadow: none; border: 1px solid #ddd; }
-  img { max-width: 100%; height: auto; }
-}
-
-/* -------------------------
-   Pequenos ajustes finais
-   ------------------------- */
-/* espaçamento consistente entre seções */
-section + section { margin-top: 1.5rem; }
-
-/* link base */
-a { color: var(--accent); }
-
-/* Fallback para fontes serif se Noto Serif Greek não carregar */
-@supports (font-family: "Noto Serif Greek") {
-  /* nada aqui, apenas placeholder para possíveis ajustes */
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
