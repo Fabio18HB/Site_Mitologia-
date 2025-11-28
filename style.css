@@ -1,4 +1,3 @@
-/* ===== CONFIGURAÇÕES GERAIS ===== */
 * {
     margin: 0;
     padding: 0;
@@ -7,14 +6,21 @@
 
 body {
     font-family: 'Noto Serif Greek', serif;
-    background-color: #f3f1ee;
-    color: #2a2a2a;
+    background-color: #15181f; /* fundo principal */
+    color: #e0e0e0; /* texto claro p/ contraste */
     line-height: 1.7;
     background-image: url("img/fundo.png");
-    background-size: 300px; /* ajuste o tamanho aqui */
-    background-repeat: repeat; 
+    background-size: 500px;
+    background-repeat: repeat;
+
+    /* Fade geral */
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
+body.loaded {
+    opacity: 1;
+}
 
 img {
     width: 100%;
@@ -22,12 +28,16 @@ img {
     border-radius: 10px;
 }
 
-/* ===== HEADER ===== */
 header {
-    background: linear-gradient(135deg, #3c2c10, #7c5e2b);
+    background: linear-gradient(135deg, #00030b, #15181f);
     padding: 2rem 1rem;
     text-align: center;
     color: #fff;
+    transition: 0.4s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 header h1 {
@@ -50,27 +60,34 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #c6c6c6;
     font-weight: bold;
     letter-spacing: 1px;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffe2a8;
+    color: #55575c;
 }
 
-/* ===== SESSÕES ===== */
 main {
     width: 90%;
     max-width: 1300px;
     margin: 0 auto;
     padding: 2rem 0;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 20px;
+    animation: fadeIn 1s ease-in;
 }
 
 .introducao {
     margin-bottom: 2rem;
     text-align: center;
+    color: #fff;
+    border-radius: 12px;
+    background: #00030b;
+    box-shadow: 0 6px 14px #55575c;
 }
 
 .introducao h2 {
@@ -80,45 +97,63 @@ main {
 .introducao p {
     max-width: 800px;
     margin: 1rem auto;
+    color: #d8d8d8;
 }
 
 /* ===== MONTE OLIMPO ===== */
 .monte-olimpo {
     margin: 2rem 0;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
 .monte-olimpo h3 {
     font-size: 1.9rem;
     margin-bottom: 1rem;
+    color: #fff;
 }
 
 .monte-olimpo p {
     margin-bottom: 1rem;
+    color: #e3e3e3;
 }
 
 /* ===== CARDS ===== */
 .card {
-    background: #fff;
+    background: #2b2d34;
     padding: 1.5rem;
     margin: 1.5rem 0;
     border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    /* animação */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card:hover {
     transform: scale(1.02);
+    background: #404248;
 }
 
 .card h2 {
     margin: 0.7rem 0;
+    color: #ffffff;
 }
 
 .card p {
     margin-top: 0.5rem;
+    color: #d4d4d4;
 }
 
-/* ===== GRID PARA CARDS ===== */
+/* ===== GRID ===== */
 .deuses,
 .criaturas,
 .Relíquias {
@@ -127,7 +162,6 @@ main {
     gap: 1.5rem;
 }
 
-/* Mantém a introdução e o monte olimpo ocupando toda a largura */
 .deuses .introducao,
 .deuses .monte-olimpo,
 .criaturas .introducao,
@@ -139,8 +173,8 @@ main {
 footer {
     text-align: center;
     padding: 1.5rem;
-    background: #3c2c10;
-    color: #fff;
+    background: #00030b;
+    color: #ccc;
     margin-top: 3rem;
 }
 
