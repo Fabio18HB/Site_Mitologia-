@@ -4,28 +4,34 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore o mundo da Mitologia Grega - Deuses, criaturas e relíquias do Olimpo" />
     <title>Mitologia Grega</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Greek&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Greek&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <h1>Mitologia Grega</h1>
-        <h4>“Onde o mito se torna imortal.”</h4>
-        <nav>
-            <ul>
-                <li><a href="#">Titãs</a></li>
-                <li><a href="#">Deuses</a></li>
-                <li><a href="#">Criaturas</a></li>
-                <li><a href="#">Relíquias</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Mitologia Grega</h1>
+            <h4>“Onde o mito se torna imortal.”</h4>
+            <nav aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#deuses">Deuses</a></li>
+                    <li><a href="#criaturas">Criaturas</a></li>
+                    <li><a href="#reliquias">Relíquias</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-
-        <section class="deuses">
+    <main class="container">
+        <section id="deuses" class="deuses" aria-labelledby="titulo-deuses">
+            <h2 id="titulo-deuses" class="section-title">Deuses do Olimpo</h2>
 
             <div class="introducao">
                 <h2 class="intro">Introdução</h2>
@@ -48,67 +54,366 @@
                 <img src="img/monteolimpo.png" alt="Monte Olimpo, lar dos deuses">
             </div>
 
-            <article class="card">
-                <h2>Zeus, o Rei do Olimpo</h2>
-                <img src="img/Zeus.jpg" alt="Imagem de Zeus, deus do trovão" />
-                <p>
-                    Zeus é o rei dos deuses gregos, senhor do céu e do trovão. Filho de Cronos e Reia, derrotou o pai
-                    para governar o Monte Olimpo. É símbolo de poder, justiça e autoridade.
-                </p>
-            </article>
+            <div class="cards-grid">
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Zeus.jpg" alt="Zeus, o Rei do Olimpo, segurando seu raio mestre" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Zeus, o Rei do Olimpo</h3>
+                        <p itemprop="description">
+                            Zeus é o rei dos deuses gregos, senhor do céu e do trovão. Filho de Cronos e Reia, derrotou
+                            o pai
+                            para governar o Monte Olimpo. É símbolo de poder, justiça e autoridade.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Céu</span>
+                            <span class="attribute">Símbolo: Trovão</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <h2>Poseidon, o Senhor dos Mares</h2>
-                <img src="img/Poseidown.jpg" alt="Imagem de Poseidon, deus dos mares" />
-                <p>
-                    Poseidon é o deus dos mares, tempestades e terremotos. Irmão de Zeus e Hades, empunha seu tridente e
-                    controla os oceanos. É símbolo de força e instabilidade.
-                </p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Poseidown.jpg" alt="Poseidon, deus dos mares" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Poseidon, o Senhor dos Mares</h3>
+                        <p itemprop="description">
+                            Poseidon é o deus dos mares, tempestades e terremotos. Irmão de Zeus e Hades, empunha seu
+                            tridente e
+                            controla os oceanos. É símbolo de força e instabilidade.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Mares</span>
+                            <span class="attribute">Símbolo: Tridente</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <h2>Hades, Deus do Submundo</h2>
-                <img src="img/hades.jpg" alt="Imagem de Hades, deus do submundo" />
-                <p>
-                    Hades é o deus do submundo e senhor dos mortos na mitologia grega. Irmão de Zeus e Poseidon, governa
-                    o reino dos espíritos com rigor e justiça, garantindo que cada alma receba seu destino. É símbolo do
-                    mistério, poder e equilíbrio entre vida e morte, representando o lado inevitável e silencioso da
-                    existência.
-                </p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/hades.jpg" alt="Hades, deus do submundo" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Hades, Deus do Submundo</h3>
+                        <p itemprop="description">
+                            Hades é o deus do submundo e senhor dos mortos na mitologia grega. Irmão de Zeus e Poseidon,
+                            governa
+                            o reino dos espíritos com rigor e justiça, garantindo que cada alma receba seu destino.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Submundo</span>
+                            <span class="attribute">Símbolo: Elmo</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <h2>Hera, Deusa do Casamento</h2>
-                <img src="img/hera.png" alt="Imagem de Hera, deusa do casamento" />
-                <p>
-                    Hera é a majestosa rainha do Olimpo, deusa do casamento e da fidelidade, marcada por sua força,
-                    orgulho e ciúme diante das traições de Zeus. Símbolo da mulher poderosa e vingativa, ela representa
-                    a dignidade e o poder feminino entre os deuses.
-                </p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/hera.png" alt="Hera, deusa do casamento" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Hera, Deusa do Casamento</h3>
+                        <p itemprop="description">
+                            Hera é a majestosa rainha do Olimpo, deusa do casamento e da fidelidade, marcada por sua
+                            força,
+                            orgulho e ciúme diante das traições de Zeus. Símbolo da mulher poderosa e vingativa.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Casamento</span>
+                            <span class="attribute">Símbolo: Pavão</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <h2>Deméter, Deusa da Agricultura</h2>
-                <img src="img/Deméter.jpg" alt="Imagem de Deméter, deusa da agricultura" />
-                <p>
-                    Deméter é a deusa da agricultura e das colheitas, símbolo da fertilidade da terra e do amor materno.
-                    Sua dor pela perda da filha Perséfone fez surgir as estações do ano, marcando seu poder sobre o
-                    ciclo da vida e da natureza.
-                </p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Deméter.jpg" alt="Deméter, deusa da agricultura" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Deméter, Deusa da Agricultura</h3>
+                        <p itemprop="description">
+                            Deméter é a deusa da agricultura e das colheitas, símbolo da fertilidade da terra e do amor
+                            materno.
+                            Sua dor pela perda da filha Perséfone fez surgir as estações do ano.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Agricultura</span>
+                            <span class="attribute">Símbolo: Espigas</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <h2>Atena, Deusa da Sabedoria</h2>
-                <img src="img/Atena.jpg" alt="Imagem de Atena, deusa da sabedoria" />
-                <p>
-                    Atena é a deusa da sabedoria e da estratégia, símbolo da razão, coragem e justiça. Nascida da cabeça
-                    de Zeus, representa o equilíbrio entre força e inteligência
-                </p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Atena.jpg" alt="Atena, deusa da sabedoria" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Atena, Deusa da Sabedoria</h3>
+                        <p itemprop="description">
+                            Atena é a deusa da sabedoria e da estratégia, símbolo da razão, coragem e justiça. Nascida
+                            da cabeça
+                            de Zeus, representa o equilíbrio entre força e inteligência.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Sabedoria</span>
+                            <span class="attribute">Símbolo: Coruja</span>
+                        </div>
+                    </div>
+                </article>
 
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Apolo.png" alt="Apolo, deus da luz e das profecias" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Apolo, Deus da luz, música, poesia, profecias e cura</h3>
+                        <p itemprop="description">
+                            Apolo é o deus da luz, da música e das profecias, símbolo da harmonia, inspiração e clareza.
+                            Filho de Zeus
+                            e Leto, representa o equilíbrio entre arte e razão, guiando os homens pelo caminho da
+                            verdade e da beleza.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Luz e as Profecias</span>
+                            <span class="attribute">Símbolo: Lira</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Ártemis.jpg" alt="Ártemis, Deusa da caça, natureza selvagem e da lua "
+                            loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Ártemis, Deusa da caça, natureza selvagem e da lua </h3>
+                        <p itemprop="description">
+                            Ártemis é a deusa da caça, da natureza selvagem e da lua, símbolo da liberdade, precisão e
+                            pureza.
+                            Filha de Zeus
+                            e Leto, representa a harmonia entre instinto e proteção, guiando os viajantes e guardando os
+                            seres
+                            vivos sob sua luz serena e independente.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Caça</span>
+                            <span class="attribute">Símbolo: O arco e flechas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Ares.png" alt="Ares, Deus da guerra, força bruta e violência" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Ares, Deus da guerra, força bruta e violência</h3>
+                        <p itemprop="description">
+                            Ares é o deus da guerra, da força e da fúria combativa, símbolo da coragem bruta, poder e
+                            impulso
+                            indomável.
+                            Filho de Zeus
+                            e Hera, representa a intensidade dos conflitos e a natureza selvagem do combate, guiando os
+                            guerreiros pelo caminho da bravura e da determinação.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: A guerra</span>
+                            <span class="attribute">Símbolo: A lança</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/afrodite.png" alt="Afrodite, Deusa do amor, beleza e desejo" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Afrodite, Deusa do amor, beleza e desejo</h3>
+                        <p itemprop="description">
+                            Afrodite é a deusa do amor, da beleza e do desejo, símbolo da sedução, harmonia emocional e
+                            encanto.
+                            Nascida da espuma do mar, representa o poder irresistível da atração e da paixão, guiando os
+                            corações humanos rumo à união, à sensibilidade e ao fascínio que move todas as relações.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: O amor e a beleza</span>
+                            <span class="attribute">Símbolo: A rosa</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Hefesto.png"
+                            alt="Hefesto, Deus do fogo, metalurgia e forjas. Criador das armas dos deuses"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Hefesto, Deus do fogo, metalurgia e forjas. Criador das armas dos deuses
+                        </h3>
+                        <p itemprop="description">
+                            Hefesto é o deus do fogo, da forja e da metalurgia, símbolo da criação, habilidade e
+                            resistência.
+                            Filho de Hera
+                            (ou de Zeus e Hera, em algumas versões), representa o poder transformador do trabalho e da
+                            engenhosidade, moldando armas e maravilhas divinas com a força do fogo e a precisão de suas
+                            mãos.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: A forja e a metalurgia</span>
+                            <span class="attribute">Símbolo: O martelo</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Hermes.png"
+                            alt="Hermes, Mensageiro dos deuses; deus do comércio, viagens, comunicação e astúcia"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Hermes, Mensageiro dos deuses; deus do comércio, viagens, comunicação e
+                            astúcia</h3>
+                        <p itemprop="description">
+                            Hermes é o deus do comércio, das viagens e da comunicação, símbolo da astúcia, rapidez e elo
+                            entre mundos.
+                            Filho de Zeus
+                            e Maia, representa a inteligência prática e a mobilidade, guiando mensageiros, viajantes e
+                            viajantes espirituais com sua astúcia e habilidades versáteis.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Mensageiro e comunicação</span>
+                            <span class="attribute">Símbolo: Sandálias aladas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Dionisio.png" alt="Dionísio, Deus do vinho, festas, teatro e êxtase"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Dionísio, Deus do vinho, festas, teatro e êxtase</h3>
+                        <p itemprop="description">
+                            Dionísio é o deus do vinho, das festas e do êxtase, símbolo da liberdade, celebração e
+                            transformação.
+                            Filho de Zeus
+                            e Sêmele, representa a energia vital que rompe convenções, guiando os mortais pela alegria,
+                            inspiração artística e pelo prazer que conecta corpo e espírito.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: O vinho e a festa</span>
+                            <span class="attribute">Símbolo: O cacho de uvas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Lyssa.png"
+                            alt="Lyssa, deusa da fúria e da loucura, especialmente a loucura vingativa"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Lyssa, deusa da fúria e da loucura, especialmente a loucura vingativa</h3>
+                        <p itemprop="description">
+                            Lyssa é a deusa da loucura, da fúria e do delírio, símbolo do caos interior, da perda de
+                            controle e da vingança.
+                            Filha de Nix (ou Nyx) em algumas tradições, representa a força irracional que pode consumir
+                            mortais e deuses, espalhando confusão, fúria e desordem, lembrando que até a mente mais
+                            equilibrada pode ser tomada pelo êxtase ou pelo delírio.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Loucura e delírio</span>
+                            <span class="attribute">Símbolo: Cães selvagens</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Nice.jpg" alt="Nice, deusa da vitória" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Nice, deusa da vitória</h3>
+                        <p itemprop="description">
+                            Nice é a deusa da vitória, símbolo do triunfo, da excelência e da glória.
+                            Filha de Palas e Estige, representa a força que conduz mortais e deuses à superação de
+                            desafios, celebrando conquistas e inspirando coragem, perseverança e honra.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Vitória</span>
+                            <span class="attribute">Símbolo: Asas douradas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Hecale.jpg" alt="Hecale, Deusa da hospitalidade e da bondade" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Hecale, Deusa da hospitalidade e da bondade</h3>
+                        <p itemprop="description">
+                            Hecale é a deusa da hospitalidade e da bondade, símbolo do acolhimento, cuidado e proteção
+                            dos viajantes.
+                            Filha de seres locais da tradição grega, representa a virtude de receber e proteger aqueles
+                            que estão em trânsito, inspirando generosidade, segurança e compaixão nas comunidades.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Hospitalidade</span>
+                            <span class="attribute">Símbolo: Cabaça</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Priapo.jpg" alt="Priapos,deus da fertilidade" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Priapos, deus da fertilidade</h3>
+                        <p itemprop="description">
+                            Priapos é o deus da fertilidade, dos jardins e dos vinhedos, símbolo da proteção das
+                            colheitas, da fartura e da prosperidade rural.
+                            Filho de Dionísio (ou Afrodite, em algumas tradições), representa a força vital que garante
+                            crescimento, abundância e segurança das plantações, celebrando a vida no campo e a
+                            produtividade da natureza.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Fertilidade</span>
+                            <span class="attribute">Símbolo: Sementeiras</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Eileithyia.jpg" alt="Eileithyia, Deusa do parto e do nascimento" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Eileithyia, Deusa do parto e do nascimento</h3>
+                        <p itemprop="description">
+                            Eileithyia é a deusa do parto e do nascimento, símbolo da proteção materna, do cuidado e da
+                            continuidade da vida.
+                            Filha de Zeus e Hera, representa a força que auxilia mães e recém-nascidos, garantindo um
+                            nascimento seguro e inspirando cuidado, esperança e preservação da vida.
+                        </p>
+                        <div class="card-attributes">
+                            <span class="attribute">Domínio: Nascimento e proteção de crianças</span>
+                            <span class="attribute">Símbolo: Tocha</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section class="criaturas">
+        <section id="criaturas" class="criaturas" aria-labelledby="titulo-criaturas">
+            <h2 id="titulo-criaturas" class="section-title">Criaturas Mitológicas</h2>
 
             <div class="introducao">
                 <h2 class="intro">Criaturas</h2>
@@ -118,59 +423,183 @@
                     e o mortal. Cada uma carrega simbolismos profundos sobre coragem, destino e medo.
                 </p>
             </div>
+            <div class="cards-grid">
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/medusa.jpg" alt="Medusa" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Medusa</h3>
+                        <p itemprop="description">Antiga sacerdotisa de Atena, Medusa foi amaldiçoada e transformada em
+                            uma criatura com cabelos de
+                            serpente e um olhar capaz de transformar em pedra qualquer um que a encarasse.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo: Górgona</span>
+                            <span class="attribute">Poder: Petrificação</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/medusa.jpg" alt="Imagem de Medusa" />
-                <h2>Medusa</h2>
-                <p>Antiga sacerdotisa de Atena, Medusa foi amaldiçoada e transformada em uma criatura com cabelos de
-                    serpente e um olhar capaz de transformar em pedra qualquer um que a encarasse. Mais do que um
-                    monstro, ela simboliza a punição divina, o poder feminino temido e a beleza corrompida pelos deuses.
-                </p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Minotauro.jpg" alt="Minotauro" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Minotauro</h3>
+                        <p itemprop="description">Nascido da união profana entre Pasífae e um touro sagrado de Poseidon,
+                            o Minotauro foi aprisionado no
+                            Labirinto de Creta. Alimentava-se de carne humana até ser derrotado por Teseu.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo: Híbrido</span>
+                            <span class="attribute">Habitat: Labirinto</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/Minotauro.jpg" alt="Imagem do Minotauro" />
-                <h2>Minotauro</h2>
-                <p>Nascido da união profana entre Pasífae e um touro sagrado de Poseidon, o Minotauro foi aprisionado no
-                    Labirinto de Creta, construído por Dédalo. Alimentava-se de carne humana até ser derrotado por
-                    Teseu. Ele representa o caos interior do homem, a fera que habita dentro da razão</p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/hydra.jpg" alt="Hidra de Lerna" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Hidra de Lerna</h3>
+                        <p itemprop="description">Criatura aquática de múltiplas cabeças, a Hidra renascia mais forte a
+                            cada golpe — pois, ao se cortar
+                            uma cabeça, duas outras cresciam em seu lugar. Derrotada por Hércules.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo: Serpente</span>
+                            <span class="attribute">Poder: Regeneração</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/hydra.jpg" alt="Imagem da Hidra de Lerna" />
-                <h2>Hidra de Lerna</h2>
-                <p>Criatura aquática de múltiplas cabeças, a Hidra renascia mais forte a cada golpe — pois, ao se cortar
-                    uma cabeça, duas outras cresciam em seu lugar. Derrotada por Hércules, tornou-se o símbolo da
-                    persistência do mal e da luta contra o impossível.</p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/centauro.png" alt="Centauro" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Centauro</h3>
+                        <p itemprop="description">Metade homem, metade cavalo, os centauros oscilavam entre a sabedoria
+                            e a selvageria. Enquanto muitos
+                            se entregavam aos instintos, Quíron tornou-se mestre de heróis como Aquiles.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo: Híbrido</span>
+                            <span class="attribute">Característica: Dualidade</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/centauro.png" alt="Imagem de um centauro" />
-                <h2>Centauro</h2>
-                <p>Metade homem, metade cavalo, os centauros oscilavam entre a sabedoria e a selvageria. Enquanto muitos
-                    se entregavam aos instintos e ao vinho, Quíron — o mais nobre entre eles — tornou-se mestre de
-                    heróis como Aquiles, simbolizando o equilíbrio entre a natureza e o espírito.</p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/satiro.png" alt="Sátiro" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Sátiros</h3>
+                        <p itemprop="description">Criaturas ligadas ao deus Dionísio, com corpo de homem e pernas de
+                            bode. Viviam entre florestas,
+                            vinhos e danças, representando o prazer, a fertilidade e a natureza indomável.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo: Espírito</span>
+                            <span class="attribute">Domínio: Natureza</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/satiro.png" alt="Imagem de um sátiro" />
-                <h2>Sátiros</h2>
-                <p>Criaturas ligadas ao deus Dionísio, com corpo de homem e pernas de bode. Viviam entre florestas,
-                    vinhos e danças, representando o prazer, a fertilidade e a natureza indomável. Alegres e travessos,
-                    os sátiros eram a personificação da liberdade dos instintos.</p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/harpias.png" alt="Harpia" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Harpias</h3>
+                        <p itemprop="description">Seres alados com rosto de mulher e corpo de ave, as Harpias eram
+                            mensageiras da vingança divina.
+                            Rápidas e impiedosas, roubavam e castigavam os mortais que ofendiam os deuses.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo: Híbrido</span>
+                            <span class="attribute">Função: Castigo</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/harpias.png" alt="Imagem de uma harpia" />
-                <h2>Harpias</h2>
-                <p>Seres alados com rosto de mulher e corpo de ave, as Harpias eram mensageiras da vingança divina.
-                    Rápidas e impiedosas, roubavam e castigavam os mortais que ofendiam os deuses. Seu nome se tornou
-                    sinônimo de tormento e fúria celestial</p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Quimera.jpg" alt="Quimera" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Quimera</h3>
+                        <p itemprop="description">Monstro híbrido com corpo de leão, cabeça de cabra nas costas e cauda
+                            de serpente, cuspindo fogo.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo: Híbrido</span>
+                            <span class="attribute">Função: Destruição</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Cerbero.png" alt="Cérbero" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Cérbero</h3>
+                        <p itemprop="description">Cão monstruoso de três cabeças que guardava a entrada do Hades,
+                            impedindo que os mortos escapassem e que os vivos entrassem sem permissão. Vigilante e
+                            temido, simboliza a inevitabilidade da morte.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo:Monstro</span>
+                            <span class="attribute">Função: Castigo</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Ciclopes.png" alt="Ciclopes" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Ciclopes</h3>
+                        <p itemprop="description">Gigantes com um único olho no centro da testa, conhecidos por sua
+                            força e habilidade em forjar armas. Podiam ajudar ou destruir, dependendo da situação.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo: Híbrido</span>
+                            <span class="attribute">Função:Forjador / Guerreiro</span>
+                        </div>
+                    </div>
+                </article>
 
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Sirena.png" alt="Sirenas" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Sirenas</h3>
+                        <p itemprop="description">Metade mulher, metade pássaro ou peixe, seduzem marinheiros com seu
+                            canto até levá-los à morte. Simbolizam a beleza perigosa e armadilhas irresistíveis.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo: Híbrido</span>
+                            <span class="attribute">Função: Tentação / Perigo</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Tifão.png" alt="Tifão" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Tifão</h3>
+                        <p itemprop="description">Gigante monstruoso de proporções colossais, Tifão era uma força da
+                            destruição primitiva. Com centenas de cabeças que lançavam fogo e serpentes como membros,
+                            espalhava caos e terror entre deuses e mortais, representando o poder incontrolável da
+                            natureza.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Tipo: Monstro / Gigante</span>
+                            <span class="attribute">Função: Destruição / Caos</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section class="Relíquias">
+        <section id="reliquias" class="reliquias" aria-labelledby="titulo-reliquias">
+            <h2 id="titulo-reliquias" class="section-title">Relíquias Divinas</h2>
 
             <div class="introducao">
                 <h2 class="intro">Relíquias</h2>
@@ -178,78 +607,225 @@
                     As relíquias dos deuses gregos eram artefatos lendários imbuidos de poder celestial. Cada uma
                     carregava a essência, a história e a autoridade de seu deus original — desde armas forjadas por
                     seres míticos até objetos capazes de controlar a natureza, o destino e até a própria vida.
-                    Representavam força, proteção e o elo entre o mundo mortal e o divino.
                 </p>
             </div>
 
-            <article class="card">
-                <img src="img/Raio mestre.png" alt="Raio Mestre – arma suprema do deus do trovão, forjada pelos Ciclopes." />
-                <h2>Raio Mestre</h2>
-                <p>O Raio Mestre é a arma suprema de Zeus, o próprio poder do céu concentrado em uma única relíquia
-                    divina. Forjado pelos gigantes Ciclopes no coração das forjas primordiais, ele carrega a fúria das
-                    tempestades, o brilho do relâmpago e o som que faz o mundo estremecer. Mais do que uma arma, o Raio
-                    Mestre é o símbolo absoluto da autoridade de Zeus sobre deuses e mortais, representando justiça,
-                    poder e o domínio celestial..
-                </p>
-            </article>
+            <div class="cards-grid">
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Raio mestre.png" alt="Raio Mestre – arma suprema do deus do trovão"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Raio Mestre</h3>
+                        <p itemprop="description">O Raio Mestre é a arma suprema de Zeus, o próprio poder do céu
+                            concentrado em uma única relíquia
+                            divina. Forjado pelos gigantes Ciclopes, ele carrega a fúria das tempestades e o brilho do
+                            relâmpago.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deus: Zeus</span>
+                            <span class="attribute">Poder: Trovão</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/tridente.png" alt="Tridente Sagrado – controla os mares, tempestades e terremotos." />
-                <h2>Tridente Sagrado</h2>
-                <p>O Tridente Sagrado é a arma lendária de Poseidon, o deus dos mares. Forjado pelos Ciclopes, ele
-                    concentra a força bruta dos oceanos e o poder imprevisível das tempestades. Com um único movimento,
-                    Poseidon é capaz de erguer ondas gigantes, provocar tempestades devastadoras e até desencadear
-                    terremotos que racham a terra. Mais que uma arma, o Tridente é o símbolo absoluto da autoridade do
-                    deus sobre todas as águas e sobre o próprio equilíbrio do mundo.</p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/tridente.png" alt="Tridente Sagrado – controla os mares" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Tridente Sagrado</h3>
+                        <p itemprop="description">O Tridente Sagrado é a arma lendária de Poseidon, o deus dos mares.
+                            Forjado pelos Ciclopes, ele
+                            concentra a força bruta dos oceanos e o poder imprevisível das tempestades.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deus: Poseidon</span>
+                            <span class="attribute">Poder: Controle dos Mares</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/Elmo da invisibilidade.png"
-                    alt="Elmo da Invisibilidade (Elmo das Sombras) – torna o usuário invisível até para os deuses." />
-                <h2>Elmo da Invisibilidade</h2>
-                <p>O Elmo da Invisibilidade, forjado pelos Ciclopes, é a relíquia sombria que concede ao seu portador a
-                    capacidade de desaparecer até mesmo diante dos olhos dos deuses. Usado por Hades, ele envolve o
-                    usuário em sombras profundas, permitindo atravessar o mundo oculto sem ser percebido. É um símbolo
-                    de mistério, sigilo e domínio sobre aquilo que permanece invisível.</p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Elmo da invisibilidade.png" alt="Elmo da Invisibilidade" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Elmo da Invisibilidade</h3>
+                        <p itemprop="description">O Elmo da Invisibilidade, forjado pelos Ciclopes, é a relíquia sombria
+                            que concede ao seu portador a
+                            capacidade de desaparecer até mesmo diante dos olhos dos deuses. Usado por Hades.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deus: Hades</span>
+                            <span class="attribute">Poder: Invisibilidade</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/Égide.png" alt="Égide – escudo poderoso decorado com a cabeça da Medusa." />
-                <h2>Égide</h2>
-                <p>A Égide é o escudo divino mais temido da mitologia grega, adornado com a cabeça da Medusa, cujo olhar
-                    ainda carrega o poder de espalhar terror. Usada por Zeus e Atena, ela não é apenas uma defesa, mas
-                    um símbolo de autoridade e força absoluta. Onde a Égide aparece, o medo domina, a batalha muda — e o
-                    poder dos deuses se impõe.</p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Égide.png" alt="Égide – escudo poderoso" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Égide</h3>
+                        <p itemprop="description">A Égide é o escudo divino mais temido da mitologia grega, adornado com
+                            a cabeça da Medusa. Usada por Zeus e Atena, ela não é apenas uma defesa, mas um símbolo de
+                            autoridade e força absoluta.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deuses: Zeus/Atena</span>
+                            <span class="attribute">Poder: Proteção Divina</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/Espadeelança.png" alt="Lança e Espada da Guerra – artefatos que amplificam a ferocidade e a força." />
-                <h2>Lança e Espada da Guerra</h2>
-                <p>A Lança e a Espada da Guerra são as armas divinas de Ares, cada uma pulsando com a essência da
-                    batalha. Forjadas para amplificar a ferocidade, a força e o caos do combate, elas transformam
-                    qualquer confronto em um campo dominado pela violência e pelo ímpeto do deus da guerra. Onde essas
-                    armas brilham, a fúria de Ares se manifesta sem limites.</p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Espadeelança.png" alt="Lança e Espada da Guerra" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Lança e Espada da Guerra</h3>
+                        <p itemprop="description">A Lança e a Espada da Guerra são as armas divinas de Ares, cada uma
+                            pulsando com a essência da
+                            batalha. Forjadas para amplificar a ferocidade, a força e o caos do combate.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deus: Ares</span>
+                            <span class="attribute">Poder: Poder da Guerra</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="card">
-                <img src="img/Cinto de Afrodite.png" alt="Cinto de Afrodite – concede charme sobrenatural a quem o usa." />
-                <h2>Cinto de Afrodite</h2>
-                <p>O Cinto de Afrodite é uma relíquia envolta em magia e sedução, capaz de conceder um charme
-                    irresistível a quem o usa. Portador do fascínio da deusa do amor, ele desperta desejo, beleza e
-                    encanto sobrenatural, influenciando corações e moldando destinos com a força sutil do desejo divino.
-                </p>
-            </article>
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Cinto de Afrodite.png" alt="Cinto de Afrodite" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Cinto de Afrodite</h3>
+                        <p itemprop="description">O Cinto de Afrodite é uma relíquia envolta em magia e sedução, capaz
+                            de conceder um charme
+                            irresistível a quem o usa. Portador do fascínio da deusa do amor.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deusa: Afrodite</span>
+                            <span class="attribute">Poder: Sedução</span>
+                        </div>
+                    </div>
+                </article>
 
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Arcoeflecha.png" alt="Arco e Flechas de Apolo/Artemis" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Arco e Flechas de Apolo/Artemis</h3>
+                        <p itemprop="description">Armas precisas, capazes de causar doenças, morte ou cura, dependendo
+                            do deus.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deuses: Apolo/Artemis</span>
+                            <span class="attribute">Poder: Precisão, proteção e castigo</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Martelo.jpg" alt="Ferramentas divinas / martelo de Hefesto"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Ferramentas divinas / martelo de Hefesto</h3>
+                        <p itemprop="description">O Martelo de Hefesto é uma relíquia de incrível poder forjador, capaz
+                            de criar armas, armaduras e objetos mágicos de perfeição divina. Portador da habilidade e
+                            engenhosidade do deus do fogo e da metalurgia.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deusa: Hefesto</span>
+                            <span class="attribute">Poder: Forjar armas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Caduceu.png" alt="Caduceu" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Caduceu</h3>
+                        <p itemprop="description">O Caduceu é uma relíquia mística, capaz de transmitir mensagens,
+                            proteger viajantes e mediar conflitos, simbolizando agilidade, comunicação e diplomacia.
+                            Portador da astúcia e do dinamismo do mensageiro dos deuses.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deus: Hermes</span>
+                            <span class="attribute">Poder: Cura parcial</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/Calice.png" alt="Cálice sagrado / Vinho divino" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Cálice sagrado / Vinho divino</h3>
+                        <p itemprop="description">O Cálice sagrado é uma relíquia de êxtase e transformação, capaz de
+                            proporcionar celebração, inspiração e prazer divino a quem o utiliza. Portador da alegria e
+                            do espírito festivo do deus do vinho.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deus: Dionísio</span>
+                            <span class="attribute">Poder: Transformação</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/cornocópia.png" alt="Feixes de trigo / Cornucópia" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Feixes de trigo / Cornucópia</h3>
+                        <p itemprop="description">Os Feixes de trigo e a Cornucópia são relíquias de fertilidade e
+                            abundância, capazes de garantir colheitas farta e prosperidade a quem as possui. Portadores
+                            da generosidade e do cuidado da deusa da agricultura.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deusa: Deméter</span>
+                            <span class="attribute">Poder: Fertilidade</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/MythologicalStory">
+                    <div class="card-image">
+                        <img src="img/FogoSagrado.png" alt="Fogo sagrado" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3 itemprop="name">Fogo sagrado</h3>
+                        <p itemprop="description">O Cinto de Afrodite é uma relíquia envolta em magia e sedução, capaz
+                            de conceder um charme
+                            irresistível a quem o usa. Portador do fascínio da deusa do amor.</p>
+                        <div class="card-attributes">
+                            <span class="attribute">Deusa: Héstia</span>
+                            <span class="attribute">Poder: Proteção do lar e da família</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </section>
-
     </main>
 
-    <footer>
-        <p>© 2025 — Estudo sobre Mitologia Grega | Feito com 🏛️ e dedicação</p>
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 — Estudo sobre Mitologia Grega | Feito com 🏛️ e dedicação</p>
+                <div class="footer-links">
+                    <a href="#top">Voltar ao topo</a>
+                    <a href="#deuses">Deuses</a>
+                    <a href="#criaturas">Criaturas</a>
+                    <a href="#reliquias">Relíquias</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <button id="backToTop" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
