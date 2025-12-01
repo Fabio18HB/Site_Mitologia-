@@ -1,6 +1,6 @@
 /* Reset e variáveis */
 :root {
-    --primary:#4b5873;
+    --primary:#7281a1;
     --secondary: #626f8b;
     --accent:#7986a3;
     --dark:#575e6e;
@@ -76,6 +76,7 @@ h1 {
     position: relative;
     z-index: 1;
 }
+
 
 header h4 {
     font-weight: 300;
